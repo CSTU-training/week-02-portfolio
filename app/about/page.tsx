@@ -52,14 +52,26 @@ const experience = [
 ];
 
 const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Frontend Architecture",
-  "Team Leadership",
-  "Cross-functional Collaboration",
-  "Bilingual (English & Mandarin)",
+  {
+    category: "Languages & Frameworks",
+    items: ["React", "Next.js", "Vue", "Nuxt", "TypeScript", "Tailwind CSS", "Node.js", "NestJS", "Python"],
+  },
+  {
+    category: "Architecture",
+    items: ["Micro-frontend", "Multi-tenant SaaS", "Event-driven", "SSE/WebSockets", "RBAC"],
+  },
+  {
+    category: "Database",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Pinecone"],
+  },
+  {
+    category: "Cloud & DevOps",
+    items: ["AWS Lambda", "S3", "RDS", "EC2", "CloudFront", "Docker", "CI/CD", "Vercel"],
+  },
+  {
+    category: "AI & Data",
+    items: ["RAG", "Vercel AI SDK", "LLM integration", "Vector search"],
+  },
 ];
 
 export default function AboutPage() {
@@ -110,16 +122,25 @@ export default function AboutPage() {
       {/* Skills */}
       <section className="mt-12">
         <h2 className="text-xl font-semibold text-zinc-900">Skills</h2>
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <li
-              key={skill}
-              className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700"
-            >
-              {skill}
-            </li>
+        <div className="mt-4 space-y-4">
+          {skills.map((group) => (
+            <div key={group.category}>
+              <p className="mb-2 text-xs font-medium uppercase tracking-wider text-zinc-400">
+                {group.category}
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <li
+                    key={skill}
+                    className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       {/* Education */}
