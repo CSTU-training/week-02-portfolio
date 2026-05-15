@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
@@ -114,24 +115,12 @@ export default function ProjectsPage() {
       {/* Project cards */}
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
         {filtered.map((project) => (
-          <li
-            key={project.id}
-            className="flex flex-col rounded-xl border border-zinc-200 bg-white p-5"
-          >
-            <h2 className="font-semibold text-zinc-900">{project.title}</h2>
-            <p className="mt-2 flex-1 text-sm leading-6 text-zinc-600">
-              {project.description}
-            </p>
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-600"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+          <li key={project.id}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+            />
           </li>
         ))}
       </ul>
