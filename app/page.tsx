@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="flex flex-1 items-center justify-center px-6 py-24">
       <div className="w-full max-w-xl">
-        <h1 className="text-5xl font-bold tracking-tight text-zinc-900">
+        <h1 className="text-5xl font-bold tracking-tight text-blue-900">
           Telliex Chiu
         </h1>
-        <p className="mt-3 text-lg font-medium text-zinc-500">
+        <p className="mt-3 text-lg font-medium text-blue-500">
           CS Student &amp; Frontend Engineer
         </p>
-        <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
+        <p className="mt-6 max-w-md text-base leading-7 text-blue-600">
           Frontend engineer with 8+ years of experience building products at
           Yahoo Taiwan, Shinho, eCloudvalley, and Awkns — across Taiwan, China,
           and the U.S. Led cross-functional teams, shipped at scale, and now
@@ -28,13 +28,13 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/projects"
-            className="inline-flex h-10 items-center rounded-full bg-zinc-900 px-6 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+            className="inline-flex h-10 items-center rounded-full bg-blue-600 px-6 text-sm font-medium text-white transition-colors hover:bg-blue-700"
           >
             View My Work
           </Link>
           <Link
             href="/about"
-            className="inline-flex h-10 items-center rounded-full border border-zinc-300 px-6 text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-400 hover:bg-zinc-50"
+            className="inline-flex h-10 items-center rounded-full border border-blue-300 px-6 text-sm font-medium text-blue-700 transition-colors hover:border-blue-400 hover:bg-blue-50"
           >
             About Me
           </Link>

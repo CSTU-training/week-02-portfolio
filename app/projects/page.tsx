@@ -88,10 +88,10 @@ export default function ProjectsPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight text-zinc-900">
+      <h1 className="text-3xl font-bold tracking-tight text-blue-900">
         Projects
       </h1>
-      <p className="mt-2 text-base text-zinc-500">
+      <p className="mt-2 text-base text-blue-500">
         A selection of work from coursework and personal exploration.
       </p>
 
@@ -103,8 +103,8 @@ export default function ProjectsPage() {
             onClick={() => setActiveTag(tag)}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
               activeTag === tag
-                ? "bg-zinc-900 text-white"
-                : "border border-zinc-200 bg-white text-zinc-600 hover:border-zinc-300 hover:bg-zinc-50"
+                ? "bg-blue-600 text-white"
+                : "border border-blue-200 bg-white text-blue-600 hover:border-blue-300 hover:bg-blue-50"
             }`}
           >
             {tag}

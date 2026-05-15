@@ -1,3 +1,11 @@
+/*
+ * @Author: Telliex telliexyuzo@gmail.com
+ * @Date: 2026-05-15 16:07:21
+ * @LastEditors: Telliex telliexyuzo@gmail.com
+ * @LastEditTime: 2026-05-15 16:35:39
+ * @FilePath: /week-02-portfolio/app/layout.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
@@ -35,13 +43,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
-        <header className="border-b border-zinc-200 bg-white">
+        <header className="border-b border-blue-200 bg-blue-500">
           <nav className="mx-auto flex h-14 max-w-3xl items-center gap-6 px-6">
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900"
+                className="text-sm font-medium text-white transition-colors hover:text-blue-900"
               >
                 {label}
               </Link>
@@ -51,8 +59,8 @@ export default function RootLayout({
 
         <main className="flex-1">{children}</main>
 
-        <footer className="border-t border-zinc-200">
-          <div className="mx-auto max-w-3xl px-6 py-6 text-sm text-zinc-500">
+        <footer className="border-t border-blue-200">
+          <div className="mx-auto max-w-3xl px-6 py-6 text-sm text-blue-500">
             © {new Date().getFullYear()} My Portfolio. All rights reserved.
           </div>
         </footer>
